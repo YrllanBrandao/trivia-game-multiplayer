@@ -1,0 +1,50 @@
+:root{
+    --background: #49378c;
+    --bgSecondary: #54BFA1;
+    --card: #fffffe;
+    --button: #49378C;
+    --buttonShadow: #362559;
+    --border: #0D090C;
+}   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.min-vh{
+    min-height: 100vh;
+}
+.vh{
+    height: 100vh;
+}
+.bg{
+    background: var(--background);
+}
+.fig{
+    background: var(--card);
+}
+.btn-main{
+    background: var(--button);
+    color: var(--card);
+}
+.btn-main:hover{
+    background: var(--buttonShadow) !important;
+    color: var(--card) !important;
+}
+.border-main{
+    border: 1px solid var(--border) !important;
+   
+}
+footer{
+    color: var(--card);
+}
+
+@media (min-width: 1000px)
+{
+    .card{
+        width: 30vw;
+        min-height: 30vh;
+    }
+}
+

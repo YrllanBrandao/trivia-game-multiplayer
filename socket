@@ -1,0 +1,32 @@
+socket.on("connection", (username) => {
+            client.username = username
+            
+        })
+        // DISCONECT
+        socket.on("disconnect", (data) => {
+
+            socket.leave(client.room);
+        })
+        socket.on('create room', (room) => {
+            client.room = room;
+            socket.join(client.room);
+            online.push(client);
+            if (isSingle(online, client.id)) {
+                socket.emit("wait");
+            }
+            else {
+                const index = online.indexOf(client);
+                const room = online[index - 1].room;
+                socket.to(room).emit("start", {
+                    username1: online[index - 1].username,
+                    username2: client.username
+                })
+                socket.emit("start",
+                    {
+                        username1: online[index - 1].username,
+                        username2: client.username,
+                        theLast: true
+                    })
+                online = [];
+            }
+        })

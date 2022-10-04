@@ -1,0 +1,57 @@
+:root{
+    --background: #49378c;
+    --bgSecondary: #54BFA1;
+    --card: #fffffe;
+    --button: #49378C;
+    --buttonShadow: #362559;
+    --border: #0D090C;
+}   
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.card-title{
+    color: var(--background);
+}
+.bg-main{
+    background: var(--background);
+}
+.min-vh{
+    min-height: 100vh;
+}
+.vh{
+    height: 100vh;
+}
+.bg{
+    background: var(--background);
+}
+.btn-form{
+    background: var(--button);
+    color: var(--card);
+}
+.btn-form:hover{
+    background: var(--buttonShadow) !important;
+    color: var(--card) !important;
+}
+@media (min-width: 1000px)
+{
+    .card{
+        width: 60vw;
+        min-height: 30vh;
+    }
+}
+@media (min-width: 1200px)
+{
+    .card{
+        width: 50vw;
+        min-height: 30vh;
+    }
+}
+@media (min-width: 1400px)
+{
+    .card{
+        width: 35vw;
+        min-height: 30vh;
+    }
+}
